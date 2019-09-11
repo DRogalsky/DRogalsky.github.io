@@ -8,8 +8,10 @@
     <title>Daniel Rogalsky</title>
     <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
-    
+
 </head>
 
 <body>
@@ -17,7 +19,7 @@
         <!-- add an animated header? that looks cool -->
         <h1 id="myName"><span class="boxed">Daniel</span> <span class="bold">Rogalsky</span></h1>
         <canvas id="animated_header" width="150" height="150"></canvas>
-        
+
     </header>
     <navbar>
         <!-- switch between about and portfolio -->
@@ -30,16 +32,81 @@
         <h1>Portfolio</h1>
         <hr>
         <section id='pictures'>
-            <div class='projectHolder'>
-                <a href="https://edwardmara.github.io/Project1/login.html" target="_blank"><img src="assets/images/Locale Screenshot.png" class='projectPhoto' /></a>
-                <p>The Locale: an Excercise Game</p>
-                <a href="https://github.com/EdwardMara/Project1" target="_blank">Repository</a>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="https://edwardmara.github.io/Project1/login.html" target="_blank"><img
+                                src="assets/images/Locale Screenshot.png" class='projectPhoto d-block w-100' /></a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>The Locale: an Excercise Game</p>
+                            <a href="https://github.com/EdwardMara/Project1" target="_blank">Repository</a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <a href="https://rush-ed.herokuapp.com/" target='_blank'><img src="assets/images/RushEd.png"
+                                class='projectPhoto d-block w-100' /></a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>RushEd: A Career Researching Website</p>
+                            <a href="https://github.com/cfpaige/rush-ed" target='_blank'>Repository</a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <a href="https://edwardmara.github.io/WishyWashy/" target="_blank"><img
+                                src="assets/images/WishyWashy.png" class='projectPhoto d-block w-100' /></a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Wishy Washy: A Service Industry Gig App</p>
+                            <a href="https://github.com/EdwardMara/WishyWashy" target="_blank">Repository </a>
+                            <span>|</span>
+                            <a href="https://github.com/DRogalsky/Wishywashybackend" target="_blank"> Back End
+                                Repository</a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <a href="https://drogalsky.github.io/unit-4-game/" target="_blank"><img
+                                src="assets/images/Starwars game pic.png" class='projectPhoto d-block w-100' /></a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Star Wars game</p>
+                            <a href="https://github.com/DRogalsky/unit-4-game" target="_blank">Repository</a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <a href="https://drogalsky.github.io/Word-Guess-Game/" target="_blank"><img
+                                src="assets/images/Word Guess game pic.png" class='projectPhoto d-block w-100' /></a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Word Guessing Game</p>
+                            <a href="https://github.com/DRogalsky/Word-Guess-Game" target="_blank">Repository</a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <a href="https://github.com/DRogalsky/bam-shopping" target='_blank'><img
+                                src="assets/images/list.png" class='projectPhoto d-block w-100' /></a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Bam shopping</p>
+                            <a href="https://github.com/DRogalsky/bam-shopping" target='_blank'>Repository</a>
+                        </div>
+                    </div>
+
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-            <div class='projectHolder'>
-                <a href="https://rush-ed.herokuapp.com/" target='_blank'><img src="assets/images/RushEd.png" class='projectPhoto' /></a>
-                <p>RushEd: A Career Researching Website</p>
-                <a href="https://github.com/cfpaige/rush-ed" target='_blank'>Repository</a>
-            </div>
+            <!-- 
             <div class='projectHolder'>
                 <a href="https://edwardmara.github.io/WishyWashy/" target="_blank"><img src="assets/images/WishyWashy.png" class='projectPhoto' /></a>
                 <p>Wishy Washy: A Service Industry Gig App</p>
@@ -62,13 +129,22 @@
                 <a href="https://github.com/DRogalsky/bam-shopping" target='_blank'><img src="assets/images/list.png" class='projectPhoto' /></a>
                 <p>Bam shopping</p>
                 <a href="https://github.com/DRogalsky/bam-shopping" target='_blank'>Repository</a>
-            </div>
+            </div> -->
         </section>
     </section>
     <script src="./assets/scripts/TweenLite.min.js"></script>
     <script src="./assets/scripts/EasePack.min.js"></script>
     <script src="./assets/scripts/rAF.js"></script>
     <script src="./assets/scripts/animatedHeader.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

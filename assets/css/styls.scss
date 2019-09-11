@@ -1,9 +1,13 @@
 // color scheme
 $main_color: #304269;
-$secondary_color: #91BED4;
+$secondary_color: #c3e6f7;
 $accent_color: #f26101;
 $border_color: #D9E8F5;
 $background_color: #FFFFFF;
+
+body{
+	background-color: $secondary_color;
+}
 
 .large-header {
 	position: relative;
@@ -13,7 +17,7 @@ $background_color: #FFFFFF;
 	background-size: cover;
 	background-position: center center;
 	z-index: 1;
-	border-bottom: 1px solid $border_color;
+
 }
 
 #myName {
@@ -70,15 +74,31 @@ navbar {
 	}
 }
 
+.carousel-caption {
+	color: black;
+	background-color: white;
+}
+
 #profile {
-	float: left;
 	margin: 1em;
 	border-radius: 50%;
+	float: left;
+}
+
+.content {
+	display: flex;
 }
 
 #aboutMe {
 	margin: 1em 300px;
 	margin-top: 2em;
+	font-family: 'Quattrocento Sans', sans-serif;
+	h1 {
+		color: $accent_color;
+	}
+	a{
+		color: $accent_color;
+	}
 	p {
 		line-height: 1.5em;
 		font-size: 1.25em;
@@ -92,6 +112,9 @@ navbar {
 #portfolio {
 	margin: 1em 300px;
 	margin-top: 2em;
+	h1 {
+		color: $accent_color;
+	}
 	p {
 		line-height: 1.5em;
 		font-size: 1.25em;
