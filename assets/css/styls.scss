@@ -75,8 +75,13 @@ navbar {
 }
 
 .carousel-caption {
-	color: black;
-	background-color: white;
+	color: white;
+	background-color: black;
+	opacity: 0.5;
+}
+
+.carousel-caption:hover {
+	opacity: 0.9;
 }
 
 #profile {
@@ -188,6 +193,14 @@ hr {
 		top: 40%;
 		font-size: 4em;
 	}
+  }
+
+  @media only screen and (max-width: 600px) {
+	  navbar {
+		  li {
+			  margin: 2em;
+		  }
+	  }
   }
 
 @media only screen and (max-width: 425px) {
