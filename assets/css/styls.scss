@@ -168,6 +168,30 @@ hr {
     width: 15em; 
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  // outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  // border: 1px solid black;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: #f26101;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: #f26101;
+}
+
 .links {
     li {
         margin: 1em;
